@@ -1,0 +1,8 @@
+@import "common";
+@import "mixins";
+
+// Стили библиотеки компонентов
+@import "~root-front/dist/index.css";
+
+// Переопределение цветов
+@import "colors";
