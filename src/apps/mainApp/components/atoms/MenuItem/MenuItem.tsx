@@ -16,7 +16,6 @@ interface IProps extends React.HTMLProps<any>{
 const MenuItem: React.FC<IProps> = ({ config }:IProps) => {
   const location = useLocation();
   // -------------------------------------------------------------------------------------------------------------------
-  console.log(location);
 
   return (
     <Link to={config.itemLink} className={`menu-item__wrapper ${location.pathname === config.itemLink && 'menu-item__active'}`}>

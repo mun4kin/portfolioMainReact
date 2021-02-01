@@ -15,7 +15,7 @@ const AsideMenu: React.FC = () => {
     {
       itemName: 'Projects',
       itemIcon: <ProjectIcon fill={'white'}/>,
-      itemLink: '/projects',
+      itemLink: '/lego',
 
     },
     {

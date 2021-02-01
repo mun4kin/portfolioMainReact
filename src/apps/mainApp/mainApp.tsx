@@ -8,7 +8,8 @@ const MainApp: React.FC = () => {
     <>
       <div className='main__wrapper'>
         <AsideMenu/>
-        <div className='main__content'/>
+        <div className='main__content angular-app' id='lego'/>
+
         {/* <HashRouter>*/}
         {/*  <Link className='nav__link' to='/worktime'>Worktime</Link>*/}
         {/*  <Link className='nav__link' to='/app2'>App 2</Link>*/}
@@ -17,5 +18,4 @@ const MainApp: React.FC = () => {
     </>
   );
 };
-
 export default MainApp;
