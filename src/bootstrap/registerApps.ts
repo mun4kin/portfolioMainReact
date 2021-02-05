@@ -1,23 +1,6 @@
 import { registerApplication } from 'single-spa';
 import { locationContainsPath } from './locationContainsPath';
 
-function findTeg():Promise<boolean> {
-  return new Promise((resolve) => {
-    let r;
-    r = document.getElementById('lego');
-    r && resolve(true);
-    const i = setInterval(() => {
-      r = document.getElementById('lego');
-
-      if (r) {
-        resolve(true);
-        clearInterval(i);
-      }
-    }, 500);
-
-  });
-}
-
 
 export const registerApps = () => {
 
@@ -32,14 +15,17 @@ export const registerApps = () => {
   registerApplication({
     name: 'lego',
     app: async() => {
-      await findTeg();
       return import('lego-proj' as string);
     },
     activeWhen: (location: Location) => {
       return locationContainsPath(location, '#/lego');
     },
   });
-
+  registerApplication({
+    name: 'cv',
+    app: () => import('cv' as string),
+    activeWhen: (location: Location) => locationContainsPath(location, '#/blog'),
+  });
 
   /*
    * registerApplication({
