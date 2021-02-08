@@ -36,7 +36,7 @@ export const registerApps = () => {
 
   registerApplication({
     name: 'graph',
-    app: () => import('graph/dist' as string),
+    app: () => import('graph' as string),
     activeWhen: (location: Location) => locationContainsPath(location, '#/graph'),
   });
   /*
