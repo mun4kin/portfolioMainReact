@@ -14,8 +14,9 @@ export const registerApps = () => {
 
   registerApplication({
     name: 'lego',
-    app: async () => {
-      return import('lego-proj' as string);
+    app: () => {
+
+      return import('lego-proj/module/main-es5.js' as string);
     },
     activeWhen: (location: Location) => {
       return locationContainsPath(location, '#/lego');
@@ -28,11 +29,16 @@ export const registerApps = () => {
   });
 
   registerApplication({
+    name: 'storybook',
+    app: () => import('../apps/storyBook' as string),
+    activeWhen: (location: Location) => locationContainsPath(location, '#/storybook'),
+  });
+
+  registerApplication({
     name: 'graph',
     app: () => import('graph/dist' as string),
     activeWhen: (location: Location) => locationContainsPath(location, '#/graph'),
   });
-
   /*
    * registerApplication({
    *   name: 'angular',

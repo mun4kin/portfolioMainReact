@@ -5,7 +5,6 @@ import ProjectIcon from '../../../assets/svg/projects';
 import IdeasIcon from '../../../assets/svg/ideas';
 import StoryBookIcon from '../../../assets/svg/storybook';
 import { IMenuItem } from '../../atoms/MenuItem/MenuItem';
-import { HashRouter } from 'react-router-dom';
 import Photo from '../../atoms/Photo';
 
 const AsideMenu: React.FC = () => {
@@ -37,9 +36,9 @@ const AsideMenu: React.FC = () => {
   return (
     <div className='aside-menu__wrapper'>
       <Photo/>
-      <HashRouter>
-        {items}
-      </HashRouter>
+
+      {items}
+
     </div>
 
   );

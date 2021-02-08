@@ -125,7 +125,7 @@ module.exports = function(webpackEnv) {
       ? shouldUseSourceMap
         ? 'source-map'
         : false
-      : isEnvDevelopment && 'cheap-module-source-map',
+      : isEnvDevelopment && 'cheap-moduleLego-source-map',
     // These are the "entry points" to our application.
     // This means they will be the "root" imports that are included in JS bundle.
     entry: [
@@ -280,7 +280,7 @@ module.exports = function(webpackEnv) {
         // Prevents users from importing files from outside of src/ (or node_modules/).
         // This often causes confusion because we only process files within src/ with babel.
         // To fix this, we prevent you from importing files out of src/ -- if you'd like to,
-        // please link the files into your node_modules/ and let module-resolution kick in.
+        // please link the files into your node_modules/ and let moduleLego-resolution kick in.
         // Make sure your source files are compiled, as they will not be processed in any way.
         new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
       ],
@@ -394,7 +394,7 @@ module.exports = function(webpackEnv) {
             // In production, we use MiniCSSExtractPlugin to extract that CSS
             // to a file, but in development "style" loader enables hot editing
             // of CSS.
-            // By default we support CSS Modules with the extension .module.css
+            // By default we support CSS Modules with the extension .moduleLego.css
             {
               test: cssRegex,
               exclude: cssModuleRegex,
@@ -409,7 +409,7 @@ module.exports = function(webpackEnv) {
               sideEffects: true,
             },
             // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
-            // using the extension .module.css
+            // using the extension .moduleLego.css
             {
               test: cssModuleRegex,
               use: getStyleLoaders({
@@ -421,7 +421,7 @@ module.exports = function(webpackEnv) {
             },
             // Opt-in support for SASS (using .scss or .sass extensions).
             // By default we support SASS Modules with the
-            // extensions .module.scss or .module.sass
+            // extensions .moduleLego.scss or .moduleLego.sass
             {
               test: sassRegex,
               exclude: sassModuleRegex,
@@ -439,7 +439,7 @@ module.exports = function(webpackEnv) {
               sideEffects: true,
             },
             // Adds support for CSS Modules, but using SASS
-            // using the extension .module.scss or .module.sass
+            // using the extension .moduleLego.scss or .moduleLego.sass
             {
               test: sassModuleRegex,
               use: getStyleLoaders(
@@ -515,7 +515,7 @@ module.exports = function(webpackEnv) {
       // in `package.json`, in which case it will be the pathname of that URL.
       // In development, this will be an empty string.
       new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
-      // This gives some necessary context to module not found errors, such as
+      // This gives some necessary context to moduleLego not found errors, such as
       // the requesting resource.
       new ModuleNotFoundPlugin(paths.appPath),
       // Makes some environment variables available to the JS code, for example:
@@ -530,7 +530,7 @@ module.exports = function(webpackEnv) {
       // a plugin that prints an error when you attempt to do this.
       // See https://github.com/facebook/create-react-app/issues/240
       isEnvDevelopment && new CaseSensitivePathsPlugin(),
-      // If you require a missing module and then `npm install` it, you still have
+      // If you require a missing moduleLego and then `npm install` it, you still have
       // to restart the development server for Webpack to discover it. This plugin
       // makes the discovery automatic so you don't have to restart.
       // See https://github.com/facebook/create-react-app/issues/186
