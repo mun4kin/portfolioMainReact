@@ -1,7 +1,6 @@
 {
   "name": "single-spa-juicy-team",
   "version": "1.0.0",
-  "homepage": "/portfolio",
   "description": "Single SPA With React And Typescript",
   "private": true,
   "dependencies": {
@@ -49,7 +48,7 @@
   "scripts": {
     "clear": "rimraf node_modules/worktime && rimraf yarn.lock && yarn && yarn start",
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "react-app-rewired build && firebase deploy",
     "test": "node scripts/test.js",
     "rflink": "yarn link worktime && yarn link react && yarn link react-dom && yarn link react-router-dom",
     "rfunlink": "yarn unlink worktime && yarn unlink react && yarn unlink react-dom && yarn unlink react-router-dom && yarn",

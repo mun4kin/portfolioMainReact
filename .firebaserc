@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "portfoliopaa",
+    "portfolio": "portfolio-juicy",
+    "portfolio-juicy": "portfolio-juicy"
+  }
+}

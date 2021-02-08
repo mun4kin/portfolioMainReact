@@ -5,7 +5,7 @@
     "unused-imports",
     "@typescript-eslint"
   ],
-  "ignorePatterns": ["nodejs", "**/*.spec.tsx", "./**/*.stories.tsx", "dist"],
+  "ignorePatterns": ["moduleLego","nodejs", "**/*.spec.tsx", "./**/*.stories.tsx", "dist"],
   "rules": {
     "no-extra-parens": "off",
     "curly": "error",
