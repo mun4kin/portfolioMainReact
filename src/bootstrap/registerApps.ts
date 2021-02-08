@@ -14,7 +14,7 @@ export const registerApps = () => {
 
   registerApplication({
     name: 'lego',
-    app: async() => {
+    app: async () => {
       return import('lego-proj' as string);
     },
     activeWhen: (location: Location) => {
@@ -25,6 +25,12 @@ export const registerApps = () => {
     name: 'cv',
     app: () => import('cv' as string),
     activeWhen: (location: Location) => locationContainsPath(location, '#/blog'),
+  });
+
+  registerApplication({
+    name: 'graph',
+    app: () => import('graph/dist' as string),
+    activeWhen: (location: Location) => locationContainsPath(location, '#/graph'),
   });
 
   /*
