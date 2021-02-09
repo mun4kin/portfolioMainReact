@@ -27,17 +27,17 @@ export const registerApps = () => {
     app: () => import('cv' as string),
     activeWhen: (location: Location) => locationContainsPath(location, '#/blog'),
   });
-
-  registerApplication({
-    name: 'storybook',
-    app: () => import('../apps/storyBook' as string),
-    activeWhen: (location: Location) => locationContainsPath(location, '#/storybook'),
-  });
+  //
+  // registerApplication({
+  //   name: 'storybook',
+  //   app: () => import('../apps/storyBook' as string),
+  //   activeWhen: (location: Location) => locationContainsPath(location, '#/storybook'),
+  // });
 
   registerApplication({
     name: 'graph',
     app: () => import('graph' as string),
-    activeWhen: (location: Location) => locationContainsPath(location, '#/graph'),
+    activeWhen: (location: Location) => locationContainsPath(location, '#/storybook'),
   });
   /*
    * registerApplication({

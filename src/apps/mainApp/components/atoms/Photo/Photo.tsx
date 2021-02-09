@@ -21,7 +21,7 @@ const Photo: React.FC<IProps> = ({ user = 'anton' }: IProps) => {
       <img className='photo__logo' src={Portfolio} alt=''/>
 
       <div className='photo__circle'>
-        <UserPhoto url={user === 'anton' ? AntonPhoto : undefined} radius='80px' />
+        <UserPhoto url={user === 'anton' ? AntonPhoto : undefined} radius='70px' />
       </div>
       <p className='photo__text'>Pugachev</p>
       <p className='photo__text'>Anton</p>

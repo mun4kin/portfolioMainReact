@@ -17,8 +17,9 @@
     "//": "========================Projects  ===================================",
     "zone.js": "^0.11.3",
     "lego-proj":"git+https://github.com/mun4kin/portfolioLegoAngular.git#0.0.5",
-    "cv":"git+https://github.com/mun4kin/portfolioCVAngular.git#0.0.6",
+    "cv":"git+https://github.com/mun4kin/portfolioCVAngular.git#0.0.14",
     "graph":"git+https://github.com/Michaeladze/graph.git#0.0.7"
+
   },
   "devDependencies": {
     "//": "========================React======================================",
